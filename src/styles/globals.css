@@ -125,9 +125,9 @@ a {
   background: url('redgif.gif');
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 150%;
-  background-position-x: -7.6vw;
-  background-position-y: -3vh;
+  background-size: 200%;
+  background-position-x: -13.1vw;
+  background-position-y: -6vh;
   background-clip: url('redgif.gif');
 }
 .neon{
