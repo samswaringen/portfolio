@@ -1,0 +1,440 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'dalek';
+  src: url('Dalek.ttf');
+}
+@font-face {
+  font-family: 'neuehaas';
+  src: url('NeueHaasDisplayBold.woff');
+}
+@font-face {
+  font-family: 'crackman';
+  src: url('CrackMan.TTF');
+}
+@font-face {
+  font-family: 'lot';
+  src: url('Lot.otf');
+}
+@font-face{
+  font-family: 'mars';
+  src: url('MarsMission-Ajpg.ttf')
+}
+@font-face{
+  font-family: 'mandalore';
+  src: url('mandalore.otf')
+}
+@font-face{
+  font-family: 'helvetica';
+  src: url('Helvetica-Bold-Font.ttf')
+}
+@font-face{
+  font-family: '1942';
+  src: url('1942.ttf')
+}
+@font-face{
+  font-family: 'ombudsman';
+  src: url('Ombudsman.otf')
+}
+#main-title{
+  position: fixed;
+  top: 0%;
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  color: white;
+  background-color: black;
+  transition: 0.6s; 
+  z-index: 999;
+
+}
+#main-title-header{
+  position: absolute;
+  top:20vh;
+  font-size: 40vh;
+  font-weight: 900;
+  transition: 0.6s;
+  z-index: 3;
+}
+#title-shadow{
+  position: absolute;
+  top:20vh;
+  font-size: 40vh;
+  font-weight: 900;
+  transition: 0.6s;
+  color: black;
+  text-shadow: 1px 1px 4px grey;
+}
+#main-title-message{
+  font-size: 2em;
+  position:relative;
+  top:45%;
+  color: black;
+  transition: 0.1s;
+}
+.display-none{
+  display: none;
+}
+
+.flow{
+  background: url('flowgif.gif');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-clip: url('flowgif.gif');
+}
+.randomnum{
+  background: url('randomnumgif.gif');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-clip: url('randomnumgif.gif');
+  background-position-x: -.5vw;
+}
+.marble{
+  background: url('marble.jpg');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: fill;
+}
+.red{
+  background: url('redgif.gif');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 150%;
+  background-position-x: -7.6vw;
+  background-position-y: -3vh;
+  background-clip: url('redgif.gif');
+}
+.neon{
+  background: linear-gradient(272deg, #19f57c, #355ff3, #f10ae4, #0ae1f1, #ffd100);
+  background-size: 200% 200%;
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: Animation 8s ease infinite;
+  -moz-animation: Animation 8s ease infinite;
+  animation: Animation 8s ease infinite;
+}
+.line-back{
+  background: url('linegif.gif');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 150%;
+  background-position-x: -1vw;
+  background-position-y: 0vh;
+  background-clip: url('linegif.gif');
+}
+.melting-back{
+  background: url('meltinggif.gif');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 150%;
+  background-position-x: 1vw;
+  background-position-y: 0vh;
+  background-clip: url('meltinggif.gif');
+  filter: grayscale();
+}
+
+@-webkit-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:0% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:0% 0%}
+}
+@keyframes Animation { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.app-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.app-box {
+  position:absolute; 
+  width:10vw;
+  height:10vw;
+  transition: 1s;
+  color:white;
+  opacity: 0;
+}
+.full-opacity{
+  opacity: 1;
+}
+#app-box-load{
+  width:90vw;
+  height:80vh;
+  position: fixed;
+  top:12.5vh;
+  left:4vw;
+  box-shadow: inset 1px 1px 4px rgb(37, 37, 37), inset -1px -1px 4px rgb(37, 37, 37);
+  background-size: cover;
+}
+#bank-background{
+  width:90vw;
+  height:80vh;
+  position: fixed;
+  top:12.5vh;
+  left:4vw;
+  box-shadow: inset 1px 1px 4px rgb(37, 37, 37), inset -1px -1px 4px rgb(37, 37, 37);
+  background-size: cover;
+  background-image: url('blackwhitebank.jpeg');
+  opacity: 0.5;
+}
+.black-back{
+  background-image: url('blackback.jpg');
+}
+.bank{
+  background-image: url('blackwhitebank.jpeg');
+}
+.brick-back{
+  background-image: url('darkbrick.jpg');
+}
+.back-black{
+  background-color: black;
+}
+.back-white{
+  background-color: white;
+}
+.back-marble{
+  background-image: url('marble.jpg');
+  border-radius: 5px;
+}
+.crypto-back{
+  background-image: url('blockchainback.jpg');
+}
+.neon-back{
+  background: linear-gradient(272deg, #19f57c, #355ff3, #f10ae4, #0ae1f1, #ffd100);
+  background-size: 200% 200%;
+  -webkit-animation: Animation 8s ease infinite;
+  -moz-animation: Animation 8s ease infinite;
+  animation: Animation 8s ease infinite;
+}
+.box1{
+  width: 50vw;
+  height: 50vh;
+  padding:10px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  z-index: 2;
+}
+.box2{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  width: 25vw;
+  height: 15vh;
+  z-index: 2;
+}
+.box3{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  width: 25vw;
+  height: 15vh;
+  z-index: 2;
+}
+.box4{
+  color:white;
+  font-family: 'neuehaas';
+  padding:20px;
+  width: 30vw;
+  height: 50vh;
+  z-index: 2;
+}
+.box5{
+  width: 30vw;
+  height: 15vh;
+  color:white;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  z-index: 2;
+}
+#about-me{
+  color: white;
+  height: 90vh;
+  position: relative;
+  padding:10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .8s;
+  opacity:0;
+  font-family: 'helvetica';
+  margin-top: -5vh;
+}
+#contact-me{
+  color: white;
+  height: 80vh;
+  position: relative;
+  top:-10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#link-div{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top:-10vh;
+}
+.dalek {
+  font-family: 'dalek';
+  font-size: 4.5vh;
+  color: white;
+  text-shadow: 1px 1px 1px black,
+               -1px 1px 1px black,
+               1px -1px 1px black,
+               -1px -1px 1px black,
+               2px 2px 4px white,
+               -2px 2px 4px white,
+               2px -2px 4px white,
+               -2px -2px 4px white;
+}
+.neuehaas {
+  font-family: 'neuehaas';
+  font-size: 3.5vh;
+  color: white;
+}
+.ombudsman{
+  font-family: 'ombudsman';
+  color:red;
+  opacity: 0.7;
+}
+.bankthumb{
+  position: relative;
+  width: 3.5vw;
+  top: 1.5vh;
+}
+.verizonthumb {
+  width: 8.1vw;
+  position: relative;
+  top:-2vh;
+  left: -4.5vw;
+}
+.vztitle{
+  position: relative;
+  top: 5vh;
+  left: 3.5vw;
+}
+.crypto-title{
+  font-family: 'mandalore';
+  font-size: 4vh;
+}
+.pac-eraser-title{
+  font-size: 7vh;
+  font-family: 'crackman';
+}
+.old-portfolio-title{
+  font-family: '1942';
+  font-size: 4vh;
+}
+.video-app1{
+  position: relative;
+  top:0.5vh;
+  left: 0.5vw;
+  height:47vh;
+  width: 48vw;
+}
+.video-app1-div{
+  position: relative;
+  border-radius: 5px;
+  height: 48vh;
+  width: 50vw;
+  background-color: white;
+  box-shadow: inset 1px 1px 4px black, inset -1px -1px 4px black;
+}
+.video-app2{
+ width:101.13%;
+}
+.video-app2-div{
+overflow-x: hidden;
+}
+.video-app4{
+  position: relative;
+  top: 0.5vh;
+  left: 0.8vw;
+  height:47vh;
+  width: 48vw;
+}
+.video-app4-div{
+  position: relative;
+  border-radius: 5px;
+  height: 48.5vh;
+  width: 50vw;
+  background-color: black;
+  box-shadow: inset 1px 1px 4px black, inset -1px -1px 4px black;
+}
+.website-link{
+  color: powderblue;
+  transition: 0.2s
+}
+.website-link:hover{
+  color: #355ff3;
+}
+.github-link{
+  color: lightcoral
+}
+.github-link:hover{
+  color: red
+}
+.website-link-div{
+  font-family: 'neuehaas';
+  font-size: 2vh;
+}
+.github-link-div{
+  font-family: 'neuehaas';
+  font-size: 2vh;
+}
+.gray {
+  filter: grayscale();
+}
+#icon-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mongodb{
+  margin-right: 1vw
+}
+.react{
+  margin-right: -0.5vw;
+}
+.nodejs{
+  margin-right: 1vw;
+}
+.docker{
+  margin-right: 1.5vw;
+}
