@@ -93,7 +93,13 @@ a {
 .display-none{
   display: none;
 }
-
+.gold{
+  background: url('gold.gif');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: contain;
+  background-clip: url('gold.gif');
+}
 .flow{
   background: url('flowgif.gif');
   -webkit-background-clip: text;
