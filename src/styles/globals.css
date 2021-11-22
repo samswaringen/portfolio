@@ -60,11 +60,39 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content:center;
-  color: white;
   background-color: black;
   transition: 0.6s; 
   z-index: 999;
 
+}
+.blackwhite{
+  background: linear-gradient(270deg, #000000, #fafafa, #000000);
+  background-size: 300% 300%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 #main-title-header{
   position: absolute;
@@ -73,6 +101,7 @@ a {
   font-weight: 900;
   transition: 0.6s;
   z-index: 3;
+  
 }
 #title-shadow{
   position: absolute;
@@ -80,25 +109,18 @@ a {
   font-size: 40vh;
   font-weight: 900;
   transition: 0.6s;
-  color: black;
-  text-shadow: 1px 1px 4px grey;
+
+
 }
 #main-title-message{
   font-size: 2em;
   position:relative;
   top:45%;
-  color: black;
+  text-shadow: 1px 1px 1px white, -1px 1px 1px white,1px -1px 1px white,-1px -1px 1px white;
   transition: 0.1s;
 }
 .display-none{
   display: none;
-}
-.gold{
-  background: url('gold.gif');
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: contain;
-  background-clip: url('gold.gif');
 }
 .flow{
   background: url('flowgif.gif');
@@ -129,6 +151,16 @@ a {
   background-position-x: -13.1vw;
   background-position-y: -6vh;
   background-clip: url('redgif.gif');
+}
+.white{
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.red-color{
+  background-color: red;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .neon{
   background: linear-gradient(272deg, #19f57c, #355ff3, #f10ae4, #0ae1f1, #ffd100);

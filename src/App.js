@@ -278,13 +278,14 @@ function App() {
   useEffect(()=>{
     if(app1Shrunk){
       document.getElementById('io').classList.remove('flow')
-      document.getElementById('main-title-header').classList.remove('gold')
+      document.getElementById('main-title-header').classList.remove('blackwhite')
       document.getElementById('main-title-header').classList.add('marble')
       document.getElementById('app-box-load').classList.remove('black-back')
+      document.getElementById('io').classList.remove('red-color')
     }
     if(!app1Shrunk){
       document.getElementById('app-box-load').classList.add('black-back')
-      document.getElementById('main-title-header').classList.add('gold')
+      document.getElementById('main-title-header').classList.add('blackwhite')
       document.getElementById('main-title-header').classList.remove('marble')
       document.getElementById('io').classList.add('flow')
     }
@@ -293,17 +294,17 @@ function App() {
   useEffect(()=>{
     if(app2Shrunk){
       document.getElementById('io').classList.remove('flow')
-      document.getElementById('main-title-header').classList.remove('gold')
+      document.getElementById('main-title-header').classList.remove('blackwhite')
       document.getElementById('main-title-header').classList.add('red')
       document.getElementById('app-box-load').classList.add('brick-back')
       setTimeout(()=>{
         document.getElementById('main-title-header').classList.remove('red')
-        document.getElementById('sam').style.color = 'white'
-        document.getElementById('io').style.color = 'red'
+        document.getElementById('main-title-header').classList.add('white')
+        document.getElementById('io').classList.add('red-color')
       },1200)
     }
     if(!app2Shrunk){
-      document.getElementById('main-title-header').classList.add('gold')
+      document.getElementById('main-title-header').classList.add('blackwhite')
       document.getElementById('app-box-load').classList.remove('brick-back')
     }
   },[app2Shrunk])
@@ -314,7 +315,8 @@ function App() {
       document.getElementById('app-box-load').classList.remove('black-back')
       document.getElementById('app-box-load').classList.add('crypto-back')
       document.getElementById('io').classList.add('line-back')
-      document.getElementById('main-title-header').classList.remove('gold')
+      document.getElementById('main-title-header').classList.remove('blackwhite')
+      document.getElementById('io').classList.remove('red-color')
     }
     if(!app3Shrunk){
       document.getElementById('app-box-load').classList.remove('crypto-back')
@@ -326,7 +328,7 @@ function App() {
   useEffect(()=>{
     if(app4Shrunk){
       document.getElementById('io').classList.remove('flow')
-      document.getElementById('main-title-header').classList.remove('gold')
+      document.getElementById('main-title-header').classList.remove('blackwhite')
       document.getElementById('main-title-header').classList.add('neon')
       
     }
@@ -367,9 +369,9 @@ function App() {
  
     <div className={styles.container}>
       <div id="main-title">
-          <div id="main-title-header" className="gold"><span id="sam">SAM</span><span className="flow" id="io"> IO</span></div>
+          <div id="main-title-header" className="blackwhite"><span id="sam">SAM</span><span className="flow" id="io"> IO</span></div>
           <div id="title-shadow">SAM IO</div>
-          <div id="main-title-message" className="gold">&#9660;</div>
+          <div id="main-title-message">&#9660;</div>
       </div>
       <div id="app-box-load" className="black-back">
       { aboutMe && <div id='about-me' className="">

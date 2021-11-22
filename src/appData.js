@@ -4,7 +4,7 @@
      app1:{
         title: `React Fullstack Bank`,
         thumbnail: `bankicon.png`,
-        summary: `I built a full stack, single page banking application.You can set up an account with your own information or use Google OAuth. The application consists of 3 seperate applications in one: an online banking platform, an ATM, and an employee portal.
+        summary: `I built a full stack, single page banking application.You can set up an account with your own information or use Google OAuth. The application consists of 3 separate applications in one: an online banking platform, an ATM, and an employee portal.
                   Authentication is handled by an authentication server which generates a JSON Web Token with successful validation that is used to access the GraphQL API. All source code is found by following Github links. Production build was pushed to website via IPFS.`,
         preview: `ReactApp.mp4`,
         website: `https://samantics.tez.page`,
